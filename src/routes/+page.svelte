@@ -96,7 +96,13 @@
 </svelte:head>
 
 <header class="header">
-    <h1>Database Seeder</h1>
+    <h1>
+        <Icon
+            icon="bi:database-fill"
+            width="24"
+            style="margin-right: 7px"
+        />Database Seeder
+    </h1>
     <button class="header__btn" on:click={onRowAdded}>
         <Icon icon="akar-icons:plus" />
         Add Column
@@ -119,6 +125,7 @@
         {/if}
     </div>
 </div>
+<h4 style="margin-bottom: 7px;">Columns</h4>
 <div class="fields">
     {#each rows as row, i}
         <div class="fields__row">

@@ -43,6 +43,19 @@ const typeAliasesPrompts: { [key: string]: string } = {
     html: 'HTML',
     job: 'Job Title',
     company: 'Company Name',
+    number: 'Number',
+    float: 'Float',
+    double: 'Double',
+    decimal: 'Decimal',
+    boolean: 'Boolean',
+    binary: 'Binary',
+    uuid: 'UUID',
+    json: 'JSON',
+    jsonb: 'JSONB',
+    array: 'Array',
+    enum: 'Enum',
+    set: 'Set',
+    point: 'Point',
 };
 
 export async function getAIRows(config: GetAIRowsConfig) {
@@ -100,7 +113,7 @@ export async function getAIRows(config: GetAIRowsConfig) {
     prompt += 'You will be asked to provide ' + config.num_rows + ' rows. \n';
 
     prompt +=
-        'Return the results in a .sql format, make sure to include backticks where appropriot. Do not include any comments or ```sql at start or end of the response. The only out should be the SQL statement \n';
+        'Return the results in a .sql format, make sure to include backticks where appropriot. Do not include any comments or ```sql at start or end of the response. The only output or reponse should be the SQL statement \n';
 
     const res = await fetch('http://localhost:11434/api/generate', {
         method: 'POST',
