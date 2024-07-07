@@ -105,7 +105,7 @@ export async function getAIRows(config: GetAIRowsConfig) {
     const res = await fetch('http://localhost:11434/api/generate', {
         method: 'POST',
         body: JSON.stringify({
-            model: 'llama3',
+            model: 'phi3',
             prompt,
             stream: false,
             options: {
