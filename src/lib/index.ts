@@ -113,12 +113,12 @@ export async function getAIRows(config: GetAIRowsConfig) {
     prompt += 'You will be asked to provide ' + config.num_rows + ' rows. \n';
 
     prompt +=
-        'Return the results in a .sql format, make sure to include backticks where appropriot. Do not include any comments or ```sql at start or end of the response. The only output or reponse should be the SQL statement \n';
+        'Return the results in a .sql format, make sure to include backticks where appropriate. Do not include any comments or ```sql at start or end of the response. The only output or reponse should be the SQL statement \n';
 
     const res = await fetch('http://localhost:11434/api/generate', {
         method: 'POST',
         body: JSON.stringify({
-            model: 'llama3',
+            model: 'gemma2',
             prompt,
             stream: false,
             options: {

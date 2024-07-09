@@ -103,10 +103,6 @@
             style="margin-right: 7px"
         />Database Seeder
     </h1>
-    <button class="header__btn" on:click={onRowAdded}>
-        <Icon icon="akar-icons:plus" />
-        Add Column
-    </button>
 </header>
 
 <div class="table">
@@ -145,6 +141,10 @@
         </div>
     {/each}
 </div>
+<button class="add-btn" on:click={onRowAdded}>
+    <Icon icon="akar-icons:plus" />
+    Add Column
+</button>
 <div class="rows">
     <div class="rows__group">
         <label for="num_rows">Rows</label>
@@ -180,18 +180,6 @@
         align-items: center;
         gap: 1rem;
         margin-bottom: 1rem;
-
-        &__btn {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
-            cursor: pointer;
-        }
     }
 
     .table {
@@ -226,6 +214,19 @@
             color: #9c2121;
             font-size: 10px;
         }
+    }
+
+    .add-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        margin-left: auto;
     }
 
     .fields {
